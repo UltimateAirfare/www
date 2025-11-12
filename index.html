@@ -822,9 +822,19 @@
                 if (error) {
                     if (error.code === '23505') { // Duplicate email
                         showMessage('This email is already subscribed!', 'error');
+                        gtag('event', 'form_submission', {
+                            'event_category': 'Engagement',
+                            'event_label': 'Waitlist Duplicate',
+                            'value': 1
+                        });
                     } else {
                         console.error('Supabase error:', error);
                         showMessage('Something went wrong. Please try again.', 'error');
+                        gtag('event', 'form_submission', {
+                            'event_category': 'Engagement',
+                            'event_label': 'Waitlist Error',
+                            'value': 1
+                        });
                     }
                 } else {
                     showMessage('Success! You\'re on the waitlist. We\'ll notify you when we launch!', 'success');
