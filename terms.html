@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - UltimateAirfare</title>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2N221MTNT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D2N221MTNT', {
+            'send_page_view': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e27;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 30px 0;
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #8b5cf6;
+        }
+
+        .content {
+            padding: 80px 0;
+        }
+
+        .page-title {
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 16px;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .policy-section {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .policy-section:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #3b82f6;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 36px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin: 30px 0 15px 0;
+            color: #8b5cf6;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        a {
+            color: #3b82f6;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #8b5cf6;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-box h2 {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-email {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3b82f6;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .contact-email:hover {
+            color: #8b5cf6;
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(10, 14, 39, 0.8);
+        }
+
+        .footer-content {
+            color: #94a3b8;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #8b5cf6;
+        }
+
+        .back-to-top {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 36px;
+            }
+
+            .policy-section {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
+        .table-of-contents {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .table-of-contents h3 {
+            color: #8b5cf6;
+            margin-top: 0;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .table-of-contents li {
+            padding: 8px 0;
+        }
+
+        .table-of-contents a {
+            text-decoration: none;
+            color: #cbd5e1;
+            transition: color 0.3s ease;
+        }
+
+        .table-of-contents a:hover {
+            color: #3b82f6;
+        }
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">✈️ UltimateAirfare</a>
+            <nav>
+                <a href="/" class="nav-link">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="page-title">Terms of Service</h1>
+            <p class="last-updated">Last Updated: November 12, 2024</p>
+
+            <div class="table-of-contents">
+                <h3>📋 Table of Contents</h3>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#service-description">2. Service Description</a></li>
+                    <li><a href="#eligibility">3. Eligibility and Registration</a></li>
+                    <li><a href="#waitlist">4. Waitlist Registration</a></li>
+                    <li><a href="#user-conduct">5. User Conduct</a></li>
+                    <li><a href="#intellectual-property">6. Intellectual Property</a></li>
+                    <li><a href="#affiliate-links">7. Affiliate Links and Commissions</a></li>
+                    <li><a href="#third-party">8. Third-Party Products and Services</a></li>
+                    <li><a href="#disclaimers">9. Disclaimers</a></li>
+                    <li><a href="#limitation">10. Limitation of Liability</a></li>
+                    <li><a href="#indemnification">11. Indemnification</a></li>
+                    <li><a href="#termination">12. Termination</a></li>
+                    <li><a href="#governing-law">13. Governing Law</a></li>
+                    <li><a href="#dispute-resolution">14. Dispute Resolution</a></li>
+                    <li><a href="#changes">15. Changes to Terms</a></li>
+                    <li><a href="#contact">16. Contact Information</a></li>
+                </ul>
+            </div>
+
+            <div class="policy-section" id="acceptance">
+                <h2><span class="section-icon">✅</span> Acceptance of Terms</h2>
+                <p>Welcome to UltimateAirfare ("we," "us," "our," or the "Company"). By accessing or using our website at UltimateAirfare.com (the "Site"), you agree to be bound by these Terms of Service ("Terms").</p>
+                
+                <div class="warning-box">
+                    <p><strong>⚠️ Important:</strong> Please read these Terms carefully before using our services. If you do not agree to these Terms, you must not access or use our Site.</p>
+                </div>
+
+                <p>Your continued use of the Site constitutes your acceptance of these Terms and any future modifications. We reserve the right to update these Terms at any time, and your continued use after such changes constitutes acceptance of the new Terms.</p>
+            </div>
+
+            <div class="policy-section" id="service-description">
+                <h2><span class="section-icon">🚀</span> Service Description</h2>
+                
+                <h3>2.1 Current Services</h3>
+                <p>UltimateAirfare.com is currently a pre-launch waitlist platform for an upcoming travel booking and loyalty rewards service. Our current services include:</p>
+                <ul>
+                    <li>Waitlist registration for early access to our platform</li>
+                    <li>Information about upcoming travel booking services</li>
+                    <li>Product recommendations for travel-related accessories</li>
+                    <li>Email communications about our platform launch and updates</li>
+                </ul>
+
+                <h3>2.2 Future Services</h3>
+                <p>Upon launch, UltimateAirfare will provide:</p>
+                <ul>
+                    <li>Flight booking services at competitive prices</li>
+                    <li>Hotel accommodation bookings with exclusive discounts</li>
+                    <li>Car rental services</li>
+                    <li>Loyalty rewards program for frequent travelers</li>
+                    <li>Travel-related product recommendations and affiliate partnerships</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Note:</strong> We reserve the right to modify, suspend, or discontinue any aspect of our services at any time without prior notice.</p>
+                </div>
+            </div>
+
+            <div class="policy-section" id="eligibility">
+                <h2><span class="section-icon">👤</span> Eligibility and Registration</h2>
+                
+                <h3>3.1 Age Requirement</h3>
+                <p>You must be at least 18 years old to use our services. By using our Site, you represent and warrant that you meet this age requirement.</p>
+
+                <h3>3.2 Account Accuracy</h3>
+                <p>You agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information during registration</li>
+                    <li>Maintain and promptly update your information to keep it accurate and complete</li>
+                    <li>Maintain the security of your account credentials</li>
+                    <li>Notify us immediately of any unauthorized use of your account</li>
+                </ul>
+
+                <h3>3.3 Account Responsibility</h3>
+                <p>You are responsible for all activities that occur under your account. We are not liable for any loss or damage arising from your failure to maintain account security.</p>
+            </div>
+
+            <div class="policy-section" id="waitlist">
+                <h2><span class="section-icon">📝</span> Waitlist Registration</h2>
+                
+                <h3>4.1 Joining the Waitlist</h3>
+                <p>By joining our waitlist, you agree to:</p>
+                <ul>
+                    <li>Receive email updates about our platform launch and promotional offers</li>
+                    <li>Provide accurate contact information (name and email address)</li>
+                    <li>Comply with all applicable laws and regulations</li>
+                </ul>
+
+                <h3>4.2 No Guarantee of Service</h3>
+                <p>Joining the waitlist does not guarantee:</p>
+                <ul>
+                    <li>Access to future services</li>
+                    <li>Specific pricing or discounts</li>
+                    <li>Priority booking or preferential treatment</li>
+                    <li>Any particular launch date or timeline</li>
+                </ul>
+
+                <h3>4.3 Unsubscribe Rights</h3>
+                <p>You may unsubscribe from our waitlist at any time by clicking the "unsubscribe" link in any email we send you or by contacting us at <a href="mailto:support@ultimateairfare.com">support@ultimateairfare.com</a>.</p>
+            </div>
+
+            <div class="policy-section" id="user-conduct">
+                <h2><span class="section-icon">⚠️</span> User Conduct</h2>
+                <p>You agree not to:</p>
+
+                <h3>5.1 Prohibited Activities</h3>
+                <ul>
+                    <li>Use the Site for any illegal or unauthorized purpose</li>
+                    <li>Violate any laws in your jurisdiction (including but not limited to copyright laws)</li>
+                    <li>Transmit any viruses, malware, or other malicious code</li>
+                    <li>Attempt to gain unauthorized access to our systems or networks</li>
+                    <li>Interfere with or disrupt the Site or servers</li>
+                    <li>Impersonate any person or entity</li>
+                    <li>Collect or harvest personal information of other users</li>
+                    <li>Engage in any automated use of the system (bots, scrapers, etc.)</li>
+                    <li>Use the Site to transmit spam or unsolicited messages</li>
+                </ul>
+
+                <h3>5.2 Content Standards</h3>
+                <p>Any content you submit or transmit must not:</p>
+                <ul>
+                    <li>Be unlawful, threatening, abusive, harassing, or discriminatory</li>
+                    <li>Infringe any intellectual property rights</li>
+                    <li>Contain false or misleading information</li>
+                    <li>Promote illegal activities or harm to minors</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Violation Warning:</strong> Violation of these conduct rules may result in immediate termination of your access to our services and potential legal action.</p>
+                </div>
+            </div>
+
+            <div class="policy-section" id="intellectual-property">
+                <h2><span class="section-icon">©️</span> Intellectual Property</h2>
+                
+                <h3>6.1 Our Ownership</h3>
+                <p>All content on the Site, including but not limited to:</p>
+                <ul>
+                    <li>Text, graphics, logos, images, and icons</li>
+                    <li>Software, code, and functionality</li>
+                    <li>Design, layout, and user interface</li>
+                    <li>Audio, video, and other multimedia content</li>
+                    <li>Trademarks, service marks, and trade names</li>
+                </ul>
+                <p>...is owned by or licensed to UltimateAirfare and is protected by copyright, trademark, and other intellectual property laws.</p>
+
+                <h3>6.2 Limited License</h3>
+                <p>We grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+                <ul>
+                    <li>Access and use the Site for personal, non-commercial purposes</li>
+                    <li>View and print content for your personal use</li>
+                </ul>
+
+                <h3>6.3 Restrictions</h3>
+                <p>You may not:</p>
+                <ul>
+                    <li>Reproduce, distribute, or publicly display any Site content</li>
+                    <li>Modify, adapt, or create derivative works</li>
+                    <li>Reverse engineer or decompile any Site software</li>
+                    <li>Remove or modify any copyright notices or trademarks</li>
+                    <li>Use our content for commercial purposes without written permission</li>
+                </ul>
+            </div>
+
+            <div class="policy-section" id="affiliate-links">
+                <h2><span class="section-icon">🔗</span> Affiliate Links and Commissions</h2>
+                
+                <h3>7.1 Affiliate Disclosure</h3>
+                <p>UltimateAirfare participates in affiliate marketing programs, including the Amazon Services LLC Associates Program. This means:</p>
+                <ul>
+                    <li>We may earn commissions from purchases made through our affiliate links</li>
+                    <li>These commissions come at no additional cost to you</li>
+                    <li>We only recommend products we believe will be valuable to travelers</li>
+                </ul>
+
+                <h3>7.2 Amazon Associates</h3>
+                <p>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+
+                <h3>7.3 Independence</h3>
+                <p>Our product recommendations are based on our assessment of value to our users. While we may earn commissions, this does not:</p>
+                <ul>
+                    <li>Affect the price you pay for products</li>
+                    <li>Influence our honest reviews and recommendations</li>
+                    <li>Create any obligation for you to purchase</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Transparency:</strong> We believe in transparency. When we earn a commission from a product link, we disclose this relationship.</p>
+                </div>
+            </div>
+
+            <div class="policy-section" id="third-party">
+                <h2><span class="section-icon">🌐</span> Third-Party Products and Services</h2>
+                
+                <h3>8.1 Third-Party Links</h3>
+                <p>Our Site may contain links to third-party websites, products, or services that are not owned or controlled by UltimateAirfare.</p>
+
+                <h3>8.2 No Endorsement</h3>
+                <p>We do not endorse or assume responsibility for:</p>
+                <ul>
+                    <li>The content, privacy policies, or practices of third-party websites</li>
+                    <li>The quality, safety, or legality of third-party products</li>
+                    <li>Any transactions between you and third-party providers</li>
+                </ul>
+
+                <h3>8.3 Your Responsibility</h3>
+                <p>When you access third-party links or purchase third-party products:</p>
+                <ul>
+                    <li>You do so at your own risk</li>
+                    <li>You are subject to the third party's terms and conditions</li>
+                    <li>You should review the third party's policies before proceeding</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Disclaimer:</strong> We are not responsible for any loss or damage incurred from third-party transactions, including but not limited to product defects, shipping issues, or customer service problems.</p>
+                </div>
+            </div>
+
+            <div class="policy-section" id="disclaimers">
+                <h2><span class="section-icon">📢</span> Disclaimers</h2>
+                
+                <h3>9.1 "As Is" Basis</h3>
+                <p>THE SITE AND ALL SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+
+                <h3>9.2 No Warranties</h3>
+                <p>We disclaim all warranties, including but not limited to:</p>
+                <ul>
+                    <li>Warranties of merchantability and fitness for a particular purpose</li>
+                    <li>Warranties that the Site will be uninterrupted or error-free</li>
+                    <li>Warranties regarding the accuracy, reliability, or completeness of content</li>
+                    <li>Warranties that defects will be corrected</li>
+                </ul>
+
+                <h3>9.3 Information Accuracy</h3>
+                <p>While we strive to provide accurate information:</p>
+                <ul>
+                    <li>Prices, availability, and details may change without notice</li>
+                    <li>Product descriptions may contain errors or omissions</li>
+                    <li>We do not guarantee the accuracy of third-party information</li>
+                </ul>
+
+                <h3>9.4 No Professional Advice</h3>
+                <p>Information on our Site is for general informational purposes only and does not constitute professional advice. You should:</p>
+                <ul>
+                    <li>Verify all information before making decisions</li>
+                    <li>Consult with appropriate professionals when necessary</li>
+                    <li>Not rely solely on information from our Site</li>
+                </ul>
+            </div>
+
+            <div class="policy-section" id="limitation">
+                <h2><span class="section-icon">⚖️</span> Limitation of Liability</h2>
+                
+                <h3>10.1 Maximum Liability</h3>
+                <p>TO THE FULLEST EXTENT PERMITTED BY LAW, ULTIMATEAIRFARE SHALL NOT BE LIABLE FOR ANY:</p>
+                <ul>
+                    <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                    <li>Loss of profits, revenue, data, or use</li>
+                    <li>Business interruption or loss of opportunities</li>
+                    <li>Damages arising from third-party products or services</li>
+                </ul>
+
+                <h3>10.2 Cap on Liability</h3>
+                <p>Our total liability to you for all claims arising from or related to these Terms or your use of the Site shall not exceed the greater of:</p>
+                <ul>
+                    <li>$100 (One Hundred US Dollars), or</li>
+                    <li>The amount you paid to us in the 12 months preceding the claim</li>
+                </ul>
+
+                <h3>10.3 Basis of the Bargain</h3>
+                <p>You acknowledge that these limitations are an essential element of the agreement between you and UltimateAirfare, and that we would not provide the services without these limitations.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Note:</strong> Some jurisdictions do not allow certain limitations of liability. In such jurisdictions, our liability is limited to the maximum extent permitted by law.</p>
+                </div>
+            </div>
+
+            <div class="policy-section" id="indemnification">
+                <h2><span class="section-icon">🛡️</span> Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless UltimateAirfare and its officers, directors, employees, agents, and affiliates from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:</p>
+                <ul>
+                    <li>Your use or misuse of the Site</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any rights of another party</li>
+                    <li>Your violation of any applicable laws or regulations</li>
+                    <li>Any content or information you provide</li>
+                </ul>
+                <p>We reserve the right to assume the exclusive defense and control of any matter subject to indemnification, at your expense.</p>
+            </div>
+
+            <div class="policy-section" id="termination">
+                <h2><span class="section-icon">🚫</span> Termination</h2>
+                
+                <h3>12.1 Our Right to Terminate</h3>
+                <p>We reserve the right to terminate or suspend your access to the Site at any time, without notice, for any reason, including but not limited to:</p>
+                <ul>
+                    <li>Violation of these Terms</li>
+                    <li>Fraudulent or illegal activity</li>
+                    <li>Requests by law enforcement or government agencies</li>
+                    <li>Unexpected technical issues or security concerns</li>
+                    <li>Extended periods of inactivity</li>
+                </ul>
+
+                <h3>12.2 Your Right to Terminate</h3>
+                <p>You may stop using the Site at any time. To fully terminate your relationship with us, you may request account deletion by contacting us.</p>
+
+                <h3>12.3 Effect of Termination</h3>
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your right to access and use the Site will immediately cease</li>
+                    <li>We may delete your account and associated data</li>
+                    <li>Provisions that should survive termination will remain in effect</li>
+                </ul>
+            </div>
+
+            <div class="policy-section" id="governing-law">
+                <h2><span class="section-icon">🏛️</span> Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of [Your State], United States, without regard to its conflict of law provisions.</p>
+                <p>You agree to submit to the personal and exclusive jurisdiction of the courts located within [Your County], [Your State] for the resolution of any disputes.</p>
+            </div>
+
+            <div class="policy-section" id="dispute-resolution">
+                <h2><span class="section-icon">⚔️</span> Dispute Resolution</h2>
+                
+                <h3>14.1 Informal Resolution</h3>
+                <p>Before initiating any formal dispute resolution, you agree to first contact us at <a href="mailto:support@ultimateairfare.com">support@ultimateairfare.com</a> to attempt to resolve the dispute informally.</p>
+
+                <h3>14.2 Arbitration Agreement</h3>
+                <p>If informal resolution fails, you agree that any dispute arising from these Terms or your use of the Site shall be resolved through binding arbitration, except that either party may seek injunctive relief in court.</p>
+
+                <h3>14.3 Class Action Waiver</h3>
+                <p>YOU AND ULTIMATEAIRFARE AGREE THAT DISPUTES WILL BE RESOLVED ON AN INDIVIDUAL BASIS. YOU WAIVE ANY RIGHT TO PARTICIPATE IN A CLASS ACTION OR CLASS-WIDE ARBITRATION.</p>
+
+                <h3>14.4 Small Claims Court</h3>
+                <p>Either party may bring a claim in small claims court as an alternative to arbitration, provided the claim qualifies for small claims court jurisdiction.</p>
+            </div>
+
+            <div class="policy-section" id="changes">
+                <h2><span class="section-icon">🔄</span> Changes to Terms</h2>
+                
+                <h3>15.1 Right to Modify</h3>
+                <p>We reserve the right to modify these Terms at any time. When we make material changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top of this page</li>
+                    <li>Notify you via email if you've provided your email address</li>
+                    <li>Display a prominent notice on our Site</li>
+                </ul>
+
+                <h3>15.2 Acceptance of Changes</h3>
+                <p>Your continued use of the Site after changes to these Terms constitutes your acceptance of the modified Terms. If you do not agree to the changes, you must stop using the Site.</p>
+
+                <h3>15.3 Review Regularly</h3>
+                <p>We encourage you to review these Terms periodically to stay informed of any updates.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><span class="section-icon">📜</span> Additional Provisions</h2>
+                
+                <h3>Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+                <h3>Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and UltimateAirfare regarding your use of the Site.</p>
+
+                <h3>No Waiver</h3>
+                <p>Our failure to enforce any provision of these Terms shall not be deemed a waiver of such provision or our right to enforce it in the future.</p>
+
+                <h3>Assignment</h3>
+                <p>You may not assign or transfer these Terms or your rights under them. We may assign these Terms without restriction.</p>
+
+                <h3>Force Majeure</h3>
+                <p>We are not liable for any failure to perform due to circumstances beyond our reasonable control, including natural disasters, war, terrorism, riots, or technical failures.</p>
+            </div>
+
+            <div class="contact-box" id="contact">
+                <h2><span class="section-icon">📧</span> Contact Information</h2>
+                <p>If you have questions or concerns about these Terms of Service, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:support@ultimateairfare.com" class="contact-email">support@ultimateairfare.com</a></p>
+                <p><strong>Legal Inquiries:</strong> <a href="mailto:legal@ultimateairfare.com" class="contact-email">legal@ultimateairfare.com</a></p>
+                <p style="margin-top: 20px; color: #94a3b8;">We typically respond to inquiries within 48 hours.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑ Back to Top</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="margin-bottom: 20px;">✈️ UltimateAirfare</div>
+            <p>Your gateway to affordable travel and seamless global communication</p>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 14px;">© 2024 UltimateAirfare.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

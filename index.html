@@ -678,6 +678,10 @@
                         🚀 Join the Waitlist
                     </button>
                     
+                    <p style="text-align: center; margin-top: 15px; font-size: 13px; color: #94a3b8;">
+                        By joining, you agree to our <a href="terms.html" style="color: #3b82f6; text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" style="color: #3b82f6; text-decoration: underline;">Privacy Policy</a>
+                    </p>
+                    
                     <div id="message" class="message"></div>
                 </form>
             </div>
@@ -693,6 +697,8 @@
                     <a href="#features">Features</a>
                     <a href="#products">Products</a>
                     <a href="#signup">Waitlist</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                     <a href="mailto:contact@ultimateairfare.com">Contact</a>
                 </div>
                 <p style="margin-top: 30px; font-size: 14px;">© 2025 UltimateAirfare.com. All rights reserved.</p>
@@ -718,7 +724,8 @@
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhoc3dpaXpuZXFwaGx0b2JzeGt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNzI5NTEsImV4cCI6MjA3Mjc0ODk1MX0.HiZZ1RTSqOf0dbc9xBbmWGaaEKaI1bM3GtCxOcdMABI';
         
         // Initialize Supabase client
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         // Google Analytics Helper Functions
         function trackEvent(eventName, eventParams = {}) {
@@ -772,7 +779,7 @@
             
             try {
                 // Insert data into Supabase
-                const { data, error } = await supabase
+                const { data, error } = await supabaseClient
                     .from('ultimateairfare_waitlist')
                     .insert([
                         { 
