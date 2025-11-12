@@ -816,8 +816,7 @@
                             name: name,
                             email: email 
                         }
-                    ])
-                    .select();
+                    ]);
 
                 if (error) {
                     if (error.code === '23505') { // Duplicate email
